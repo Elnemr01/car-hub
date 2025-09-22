@@ -1,0 +1,70 @@
+.hero {
+    margin: 50px 0;
+    padding: 130px 0;
+}
+
+@media (width <= 667px) {
+    .hero {
+        padding: 70px 0;
+    }
+}
+
+.hero > img {
+    position: absolute;
+    z-index: -1;
+    left: 700px;
+    top: -40px;
+}
+
+@media (width <= 667px) {
+    .hero > img {
+        left: 0;
+        bottom: 0;
+        top: revert;
+    }
+}
+
+.hero .container .leftSec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero .container .leftSec h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+@media (width <= 667px) {
+    .hero .container .leftSec h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+.hero .container .leftSec p {
+}
+
+.hero .container .leftSec a {
+    color: #fff;
+    background-color: #0060d1;
+    border-radius: 5px;
+    width: fit-content;
+    font-weight: 600;
+    padding: 7px 10px;
+    text-transform: capitalize;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+.hero .container .rightSec {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .container .rightSec img:last-child {
+    width: 460px;
+}

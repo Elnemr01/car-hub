@@ -1,0 +1,23 @@
+header {
+    padding: 20px 0;
+    box-shadow: 1px -4px 10px black;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo {
+    width: 100px;
+}
+
+header .container a {
+    font-size: .875rem;
+    font-weight: 400;
+    color: #333;
+    text-transform: capitalize;
+    padding: 5p0 20px;
+    background-color: white;
+}

@@ -1,0 +1,144 @@
+.catalogue {
+
+}
+
+.catalogue .container {
+    
+}
+
+.catalogue .container h1 {
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+@media (width<=667px) {
+    .catalogue .container h1 {
+        font-size: 25px;
+    }
+}
+
+.catalogue .container p {
+    font-size: .875rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #333;
+    margin-top: 5px;
+}
+
+.catalogue .container .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin: 10px 0;
+}
+
+@media (width<=776px) {
+    .catalogue .container .search {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: start;
+    }
+}
+
+/* ------------search inputs filteration------------ */
+
+.catalogue .container .search .searchInputs {
+    display: flex;
+    align-items: center;
+    /* background-color: #eee; */
+    gap: 10px;
+    border-radius: 10px;
+}
+
+@media (width<=667px) {
+    .catalogue .container .search .searchInputs {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: start;
+    }
+
+}
+
+/* manufacture filteration */
+.catalogue .container .search .searchInputs .manufacture,
+.catalogue .container .search .searchInputs .model {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    padding: 0 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.catalogue .container .search .searchInputs .manufacture ul {
+    background-color: #fff;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    overflow-y: scroll;
+}
+
+.showManufacturesMenu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 10px;
+}
+
+.showManufacturesMenu li:hover {
+    background: #f0f0f0;
+}
+
+
+
+.catalogue .container .search .searchInputs input {
+    padding: 10px;
+    outline: none;
+    
+}
+
+/* model filteration */
+
+.catalogue .container .search .searchInputs img {
+    width: 25px;
+}
+
+.catalogue .container .search .searchInputs .model input {
+    
+}
+
+.catalogue .container .search .searchInputs > img {
+    
+}
+
+
+/* filter by year and fuel */
+
+.catalogue .container .search .searchSelections {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.catalogue .container .search .select-div {
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 10px #eee;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.catalogue .container .search .select-div select {
+    outline: none;
+    cursor: pointer;
+}
+
+.catalogue .container .search select option {
+    padding: 10px;
+    color: #333;
+}
