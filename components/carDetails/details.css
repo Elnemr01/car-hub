@@ -1,0 +1,45 @@
+.info {
+    padding: 10px;
+}
+
+.info > .image {
+    background-image: url('../../public/pattern.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.info .image img {
+    width: 200px;
+}
+
+.info .name {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 20px 0;
+    color: #333;
+    text-align: left;
+}
+
+.info .mainInfo {
+    
+}
+
+.info .mainInfo p {
+    text-transform: capitalize;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    display: flex;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.info .mainInfo p span:last-child {
+    color: #333;
+}

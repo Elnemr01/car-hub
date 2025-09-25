@@ -5,6 +5,10 @@ import carLogo from './car-logo.svg'
 import modelIcon from './model-icon.png'
 import arrowUpDown from './chevron-up-down.svg'
 import searchIcon from './magnifying-glass.svg'
+import fuelPh from './gas.svg'
+import wheel from './steering-wheel.svg'
+import tire from './tire.svg'
+import closeIcon from './close.svg'
 
 export let assets = {
     logo,
@@ -13,7 +17,11 @@ export let assets = {
     carLogo,
     modelIcon,
     arrowUpDown,
-    searchIcon
+    searchIcon,
+    fuelPh,
+    wheel,
+    tire,
+    closeIcon
 }
 
 

@@ -16,7 +16,7 @@ const Hero = () => {
                     <p className="description">
                         Streamline you car rental experience with our effortless booking process.
                     </p>
-                    <Link href={'/'}>explore cars</Link>
+                    <Link href={'#carCatalogue'}>explore cars</Link>
                 </div>
                 <div className="rightSec relative">
                     <Image src={assets.hero} loading='lazy' alt='hero photo'/>

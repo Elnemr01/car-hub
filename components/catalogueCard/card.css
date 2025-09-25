@@ -1,0 +1,93 @@
+.catalogueCard {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.catalogueCard .name {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.catalogueCard .price {
+    display: flex;
+}
+
+.catalogueCard .price .priceNum {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.catalogueCard .price span:last-child {
+    align-self: flex-end;
+}
+
+.catalogueCard .carPhoto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    
+}
+
+.catalogueCard .carPhoto img {
+    width: 200px
+}
+
+.catalogueCard .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catalogueCard .info .part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalogueCard .info .part .image {
+    width: 18px;
+}
+
+.catalogueCard .info .part img {
+    
+}
+
+.catalogueCard .info .part .text {
+    
+}
+
+
+.btnDiv {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 10px;
+    transition: .2s;
+    opacity: 0;
+    z-index: 1;
+}
+
+.btnDiv.shown {
+    opacity: 1;
+    z-index: 100;
+}
+
+.btnDiv button {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    background-color: #0060d1;;
+    opacity: 1;
+    border-radius: 10px;
+}

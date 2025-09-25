@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Car Hub",
   description: "Developed by Elnemr",
   icons : {
-    icon : './logo.svg'
+    icon : './logo.png'
   }
 };
 

@@ -2,17 +2,31 @@
 import './catalogue.css'
 import Image from 'next/image'
 import { assets, manufactures } from '@/public/assets'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { getCars, getYears } from '@/utlis'
+import CatalogueCard from '../catalogueCard/CatalogueCard'
+import Loading from '../loading/Loading'
 
 const CarCatalogue = () => {
     let [manufacturesMenu,setManufacturesMenu]=useState(manufactures);
     let [manufactureValue,setManufactureValue]=useState('');
     let [showManufacturesMenu,setShowManufacturesMenu]=useState(false);
+    let [all_years,setYears]=useState([]);
+    let [all_cars,setCars]=useState([]);
 
+
+    useEffect(()=> {
+        getData();
+    },[])
+
+    let getData = async ()=> {
+        setYears(await getYears());
+        setCars(await getCars());
+    }
 
 
     // handle Filter Manufactures Menu
-    let handle_Filter_Manufactures_Menu = (e) => {
+    let handle_Filter_Manufactures_Menu = (e :React.ChangeEvent<HTMLInputElement>) => {
         let value = e.target.value;
         setManufactureValue(value);
         setShowManufacturesMenu(true);
@@ -23,9 +37,9 @@ const CarCatalogue = () => {
     };
 
 
-
+    if(all_years.length===0 || all_cars.length===0) return <Loading/>
     return (
-        <div className='catalogue'>
+        <div className='catalogue' id='carCatalogue'>
             <div className="container">
                 <h1>car catalogue</h1>
                 <p>explore out cars you might like</p>
@@ -65,15 +79,42 @@ const CarCatalogue = () => {
                         <div className="year select-div">
                             <select name="yearSelect" id="yearSelect">
                                 <option value="Year">Year</option>
-                                <option value="option">option</option>
-                                <option value="option">option</option>
-                                <option value="option">option</option>
-                                <option value="option">option</option>
-                                <option value="option">option</option>
+                                {
+                                    all_years.map((year,i)=> <option key={i}
+                                    value={year}>{year}</option>)
+                                }
                             </select>
                         </div>
                     </div>
                 </div>
+                {/* show all cars */}
+                <div className="cars">
+                    {
+                        all_cars.map((car,i)=> <CatalogueCard key={i} car={car}/>)
+                    }
+                    {
+                        all_cars.map((car,i)=> <CatalogueCard key={i} car={car}/>)
+                    }
+                    {
+                        all_cars.map((car,i)=> <CatalogueCard key={i} car={car}/>)
+                    }
+                    {
+                        all_cars.map((car,i)=> <CatalogueCard key={i} car={car}/>)
+                    }
+                    {
+                        all_cars.map((car,i)=> <CatalogueCard key={i} car={car}/>)
+                    }
+                    {
+                        all_cars.map((car,i)=> <CatalogueCard key={i} car={car}/>)
+                    }
+                    {
+                        all_cars.map((car,i)=> <CatalogueCard key={i} car={car}/>)
+                    }
+                    {
+                        all_cars.map((car,i)=> <CatalogueCard key={i} car={car}/>)
+                    }
+                </div>
+                
             </div>
         </div>
     )
